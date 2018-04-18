@@ -1,0 +1,30 @@
+header {
+    width: 100%;
+    height: 56px;
+    color: #ffffff;
+    background: #1565c0;
+    position: fixed;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+    padding-left: 16px;
+    margin: auto;
+    h2 {
+        font-size: 20px;
+    }
+}
+
+.main {
+    padding-top: 60px;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .card {
+        padding: 16px;
+        position: relative;
+        box-sizing: border-box;
+        background: #f5f5f6;
+        border-radius: 2px;
+        margin: 16px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        color: #263238;
+    }
+}
