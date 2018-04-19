@@ -1,0 +1,36 @@
+{
+    "index": "/index.html",
+    "assetGroups": [{
+        "name": "app",
+        "installMode": "prefetch",
+        "resources": {
+            "files": [
+                "/favicon.ico", "/index.html"
+            ],
+            "versionedFiles": [
+                "/*.bundle.css", "/*.bundle.js", "/*.chunk.js"
+            ]
+        }
+    }, {
+        "name": "assets",
+        "installMode": "lazy",
+        "updateMode": "prefetch",
+        "resources": {
+            "files": [
+                "/assets/**"
+            ]
+        }
+    }],
+    "dataGroups": [{
+        "name": "content-items",
+        "urls": [
+            "https://deliver.kenticocloud.com/66ab95de-6599-0018-f141-3c9dc08fe797/items"
+        ],
+        "cacheConfig": {
+            "maxSize": "30",
+            "maxAge": "6d",
+            "timeout": "2s",
+            "strategy": "freshness"
+        }
+    }]
+}
