@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { DeliveryClientProvider } from './delivery-client.provider';
 
 import { AppComponent } from './app.component';
 
@@ -12,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [DeliveryClientProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

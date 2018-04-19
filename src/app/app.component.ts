@@ -1,10 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { DeliveryClient, ContentItem } from 'kentico-cloud-delivery-typescript-sdk';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'app';
+
+export class AppComponent implements OnInit, OnDestroy {
+  dataSubscription: Subscription;
+  pointsOfInterest: ContentItem[];
+
+  constructor(private deliveryClient: DeliveryClient) { }
+
+  ngOnInit() {
+    this.dataSubscription = this.deliveryClient
+      .items<ContentItem>()
+      .type('point_of_interest')
+      .get()
+      .subscribe(response => {
+        this.pointsOfInterest = response.items;
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.dataSubscription.unsubscribe();
+  }
 }
+
+
