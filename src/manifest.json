@@ -1,8 +1,8 @@
 {
     "name": "Pack and Go",
     "short_name": "Pack and Go",
-    "theme_color": "#1565c0",
-    "background_color": "#e1e2e1",
+    "theme_color": "#1e88e5",
+    "background_color": "#eeeeee",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
