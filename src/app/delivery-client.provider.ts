@@ -1,11 +1,11 @@
-import { DeliveryClient, DeliveryClientConfig } from 'kentico-cloud-delivery-typescript-sdk';
+import { DeliveryClient } from 'kentico-cloud-delivery-typescript-sdk';
 
 export const DeliveryClientFactory = (): DeliveryClient => {
     const projectId = '66ab95de-6599-0018-f141-3c9dc08fe797';
 
-    return new DeliveryClient(
-        new DeliveryClientConfig(projectId, [])
-    );
+    return new DeliveryClient({
+        projectId: projectId
+    });
 };
 
 export const DeliveryClientProvider = {
