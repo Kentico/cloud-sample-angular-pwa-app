@@ -12,6 +12,14 @@
         "lint": "ng lint",
         "e2e": "ng e2e"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kentico/cloud-sample-angular-pwa-app.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Kentico/cloud-sample-angular-pwa-app/issues"
+    },
+    "homepage": "https://github.com/Kentico/cloud-sample-angular-pwa-app#readme",
     "private": true,
     "dependencies": {
         "@angular/animations": "^5.2.0",
