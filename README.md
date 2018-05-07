@@ -1,4 +1,4 @@
-# Pack and Go (cloud-sample-pwa-app)
+# Pack and Go (cloud-sample-angular-pwa-app)
 
 Travel application featuring various points of interests around you written in [Angular](https://angular.io/) and using [Kentico Cloud](https://kenticocloud.com) as a data source.
 
