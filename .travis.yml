@@ -4,10 +4,10 @@ language: node_js
 node_js:
 - "stable"
 addons:
-  chrome: stable
+  google-chrome-beta
+before_install:
+- google-chrome-beta --headless --no-sandbox
 before_script:
-- "sudo chown root /opt/google/chrome/chrome-sandbox"
-- "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
 - npm install
 before_deploy:
 - npm run build
