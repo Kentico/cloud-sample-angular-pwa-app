@@ -4,9 +4,9 @@ language: node_js
 node_js:
 - "stable"
 addons:
-  google-chrome-beta
+  chrome: stable
 before_install:
-- google-chrome-beta --headless --no-sandbox
+- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_script:
 - npm install
 before_deploy:
