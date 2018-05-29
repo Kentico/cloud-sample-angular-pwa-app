@@ -2,7 +2,7 @@
   "name": "cloud-sample-angular-pwa-app",
   "displayName": "Pack and Go",
   "description": "Travel application featuring various points of interests around you.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
