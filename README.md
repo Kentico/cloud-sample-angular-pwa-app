@@ -9,7 +9,10 @@ Travel application featuring various points of interests around you written in [
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-The project is using [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5. To be able to run ng command, it is required to install it by ```npm i -g @angular/cli```.
+### Prerequisities
+
+The project is using [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5. **To be able to run ng commands, it is required to install it by** 
+```npm i -g @angular/cli```.
 
 ### Application setup
 
@@ -17,7 +20,7 @@ The project is using [Angular CLI](https://github.com/angular/angular-cli) versi
 2. Clone the sample application repository.
 3. Navigate to the root folder of the application in the command line.
 4. Type `npm install` to install required npm packages.
-5. Type `ng serve` to start a development server.
+5. Type `npm start` to start a development server.
 6. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Development server
