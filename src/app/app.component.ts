@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DeliveryClient, ContentItem } from 'kentico-cloud-delivery-typescript-sdk';
+import { DeliveryClient, ContentItem } from 'kentico-cloud-delivery';
 import { Subscription } from 'rxjs';
 
 @Component({
