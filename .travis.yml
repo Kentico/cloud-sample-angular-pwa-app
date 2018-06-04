@@ -10,5 +10,7 @@ before_deploy:
 deploy:
   provider: surge
   project: ./dist/
-  domain: kentico-cloud-sample-angular-pwa-app.surge.sh 
+  domain: https://kentico-cloud-sample-angular-pwa-app.surge.sh 
   skip_cleanup: true
+after_deploy:
+- npm run check-pwa-score
