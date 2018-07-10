@@ -2,6 +2,7 @@
 [![Build Status](https://api.travis-ci.org/Kentico/cloud-sample-angular-pwa-app.svg?branch=master)](https://travis-ci.org/Kentico/cloud-sample-angular-pwa-app)
 [![Deploy Status](https://img.shields.io/badge/deploy-surge-brightgreen.svg)](https://kentico-cloud-sample-angular-pwa-app.surge.sh)
 [![Forums](https://img.shields.io/badge/chat-on%20forums-orange.svg)](https://forums.kenticocloud.com)
+[![Analytics](https://ga-beacon.appspot.com/UA-69014260-4/Kentico/cloud-sample-angular-pwa-app?pixel)](https://github.com/igrigorik/ga-beacon)
 
 Travel application featuring various points of interests around you written in [Angular](https://angular.io/) and using [Kentico Cloud](https://kenticocloud.com) as a data source.
 
