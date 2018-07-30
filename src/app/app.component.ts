@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DeliveryClient, ItemResponses } from 'kentico-cloud-delivery';
 import { Subscription } from 'rxjs';
-import { GeolocationService } from './geolocation.service';
+import { GeolocationService } from './services/geolocation.service';
 
 import { PointOfInterest } from './models/point_of_interest';
 

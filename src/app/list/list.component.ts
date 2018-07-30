@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { DeliveryClient, ItemResponses } from 'kentico-cloud-delivery';
 import { Subscription } from 'rxjs';
 import { GeolocationService } from '../services/geolocation.service';
@@ -17,7 +18,8 @@ export class ListComponent implements OnInit, OnDestroy {
 
   constructor(
     private deliveryClient: DeliveryClient,
-    private geolocationService: GeolocationService
+    private geolocationService: GeolocationService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -37,6 +39,10 @@ export class ListComponent implements OnInit, OnDestroy {
   openMap(pointOfInterest: PointOfInterest) {
     location.href = this.geolocationService
       .getMapLink(pointOfInterest.latitudeDecimalDegrees.value, pointOfInterest.latitudeDecimalDegrees.value);
+  }
+
+  showPointOfInterest(pointOfInterest: PointOfInterest) {
+    this.router.navigate(['/poi', pointOfInterest.urlSlug.value]);
   }
 }
 

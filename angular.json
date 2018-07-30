@@ -22,7 +22,8 @@
                             "src/manifest.json"
                         ],
                         "styles": [
-                            "src/travel-theme.scss"
+                            "src/travel-theme.scss",
+                            "node_modules/font-awesome/css/font-awesome.css"
                         ],
                         "scripts": []
                     },
