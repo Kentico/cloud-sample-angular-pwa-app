@@ -17,3 +17,54 @@ $travel-app-theme: mat-light-theme($travel-app-primary, $travel-app-accent, $tra
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($travel-app-theme); 
+
+// Define font
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(assets/fonts/MaterialIcons-Regular.woff2) format('woff2'), url(assets/fonts/MaterialIcons-Regular.woff) format('woff'), url(assets/fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+} 
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url(assets/fonts/RobotoMedium.eot);
+  src: url(assets/fonts/RobotoMedium.woff2) format('woff2'), url(assets/fonts/RobotoMedium.woff) format('woff'), url(assets/fonts/RobotoMedium.ttf) format('truetype'), url(assets/fonts/RobotoMedium.svg#RobotoMedium) format('svg');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'RobotoMedium', 'Helvetica', 'Verdana', sans-serif;
+    font-weight: 400;
+    font-display: optional;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 	

@@ -27,6 +27,13 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.dataSubscription.unsubscribe();
   }
+
+  openMap(pointOfInterest) {
+    location.href = 'http://maps.google.com/?q='
+    + pointOfInterest.latitude__decimal_degrees_.value
+    + ','
+    + pointOfInterest.longitude__decimal_degrees_.value;
+  }
 }
 
 

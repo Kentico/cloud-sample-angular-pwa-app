@@ -12,8 +12,6 @@
   <mat-card-content innerHTML="{{poi.description.value}}">
   </mat-card-content>
   <mat-card-actions>
-    <a target="_blank" href="http://maps.google.com/?ie=UTF8&amp;hq=&amp;ll={{poi.latitude__decimal_degrees_.value}},{{poi.longitude__decimal_degrees_.value}}&amp;z=16">
-            Open the map
-         </a>
+      <button (click)="openMap(poi)" mat-button><mat-icon>map</mat-icon></button>
   </mat-card-actions>
 </mat-card>
