@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DeliveryClient, ContentItem } from 'kentico-cloud-delivery';
 import { Subscription } from 'rxjs';
+import { GeolocationService } from './geolocation.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,10 @@ export class AppComponent implements OnInit, OnDestroy {
   dataSubscription: Subscription;
   pointsOfInterest: ContentItem[];
 
-  constructor(private deliveryClient: DeliveryClient) { }
+  constructor(
+    private deliveryClient: DeliveryClient,
+    private geolocationService: GeolocationService
+  ) { }
 
   ngOnInit() {
     this.dataSubscription = this.deliveryClient
@@ -29,10 +33,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   openMap(pointOfInterest) {
-    location.href = 'http://maps.google.com/?q='
-    + pointOfInterest.latitude__decimal_degrees_.value
-    + ','
-    + pointOfInterest.longitude__decimal_degrees_.value;
+    location.href = this.geolocationService
+      .getMapLink(pointOfInterest.latitude__decimal_degrees_.value, pointOfInterest.longitude__decimal_degrees_.value);
   }
 }
 

@@ -6,6 +6,7 @@ import { MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule } from 
 
 import { environment } from '../environments/environment';
 import { DeliveryClientProvider } from './delivery-client.provider';
+import { GeolocationService } from './geolocation.service';
 
 import { AppComponent } from './app.component';
 
@@ -24,7 +25,10 @@ import { AppComponent } from './app.component';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [DeliveryClientProvider],
+  providers: [
+    DeliveryClientProvider,
+    GeolocationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
