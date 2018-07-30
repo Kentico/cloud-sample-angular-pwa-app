@@ -5,7 +5,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule } from '@angular/material';
 
 import { environment } from '../environments/environment';
-import { DeliveryClientProvider } from './delivery-client.provider';
+import { DeliveryClientProvider } from './setup/delivery-client.provider';
 import { GeolocationService } from './geolocation.service';
 
 import { AppComponent } from './app.component';

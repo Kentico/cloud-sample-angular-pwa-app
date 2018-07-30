@@ -1,7 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DeliveryClient, ContentItem } from 'kentico-cloud-delivery';
+import { DeliveryClient, ItemResponses } from 'kentico-cloud-delivery';
 import { Subscription } from 'rxjs';
 import { GeolocationService } from './geolocation.service';
+
+import { PointOfInterest } from './models/point_of_interest';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,7 @@ import { GeolocationService } from './geolocation.service';
 
 export class AppComponent implements OnInit, OnDestroy {
   dataSubscription: Subscription;
-  pointsOfInterest: ContentItem[];
+  pointsOfInterest: PointOfInterest[];
 
   constructor(
     private deliveryClient: DeliveryClient,
@@ -20,10 +22,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.dataSubscription = this.deliveryClient
-      .items<ContentItem>()
+      .items<PointOfInterest>()
       .type('point_of_interest')
       .getObservable()
-      .subscribe(response => {
+      .subscribe((response: ItemResponses.DeliveryItemListingResponse<PointOfInterest>) => {
         this.pointsOfInterest = response.items;
       });
   }
@@ -32,9 +34,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.dataSubscription.unsubscribe();
   }
 
-  openMap(pointOfInterest) {
+  openMap(pointOfInterest: PointOfInterest) {
     location.href = this.geolocationService
-      .getMapLink(pointOfInterest.latitude__decimal_degrees_.value, pointOfInterest.longitude__decimal_degrees_.value);
+      .getMapLink(pointOfInterest.latitudeDecimalDegrees.value, pointOfInterest.latitudeDecimalDegrees.value);
   }
 }
 
