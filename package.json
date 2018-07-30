@@ -4,13 +4,19 @@
   "description": "Travel application featuring various points of interests around you.",
   "version": "0.0.2",
   "license": "MIT",
+  "config": {
+    "deployUrl": "https://angular-kentico-cloud-sample-pwa-app.surge.sh"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "surge dist %npm_package_config_deployUrl%",
+    "lighthouse": "npm run build && npm run deploy && npm-delay 2000 && lighthouse --chrome-flags=\"--headless\" --quiet --output=json %npm_package_config_deployUrl%",
+    "check-pwa-score": "node checkLighthouse.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +40,7 @@
     "@angular/service-worker": "^6.0.3",
     "core-js": "^2.5.7",
     "kentico-cloud-delivery": "4.0.2",
+    "npm-delay": "^1.0.4",
     "rxjs": "^6.2.0",
     "zone.js": "^0.8.26"
   },
@@ -54,6 +61,7 @@
     "karma-coverage-istanbul-reporter": "^2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^1.1.0",
+    "lighthouse": "^2.9.4",
     "protractor": "~5.3.2",
     "ts-node": "~6.0.5",
     "tslint": "~5.10.0",

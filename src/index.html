@@ -7,12 +7,59 @@
     <base href="/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1e88e5">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="manifest" href="manifest.json" />
+    <style>
+        header.static {
+            width: 100%;
+            height: 56px;
+            color: #fff;
+            background: #1e88e5;
+            position: fixed;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 2px 9px 1px rgba(0, 0, 0, .12), 0 4px 2px -2px rgba(0, 0, 0, .2);
+            padding-left: 16px;
+            margin: auto;
+            z-index: 10000;
+        }
+
+        header.static h2 {
+            font-size: 20px;
+        }
+
+        main.static {
+
+
+            overflow-x: hidden;
+            overflow-y: auto
+        }
+    </style>
 </head>
 
-<body>
-    <app-root></app-root>
+<body style="padding: 0;
+    margin: 0;
+    font-family: 'Helvetica', 'Verdana', 'sans-serif';
+    background: #eeeeee;">
+    <noscript>
+        This page require to have the javascript enabled.
+    </noscript>
+    <app-root>
+        <header class="static" style="width: 100%;
+            height: 56px;
+            color: #fff;
+            background: #1e88e5;
+            position: fixed;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 2px 9px 1px rgba(0, 0, 0, .12), 0 4px 2px -2px rgba(0, 0, 0, .2);
+            padding-left: 16px;
+            margin: auto;
+            z-index: 10000;">
+            <h2 style="font-size: 20px;">Pack and Go</h2>
+        </header>
+        <main style="padding-top: 60px;
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: auto;"></main>
+    </app-root>
 </body>
 
 </html>
