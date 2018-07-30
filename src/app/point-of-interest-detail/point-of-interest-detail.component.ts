@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { DeliveryClient } from 'kentico-cloud-delivery';
+import { DeliveryClient, ImageUrlBuilder } from 'kentico-cloud-delivery';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
 
 
@@ -56,7 +56,7 @@ export class PointOfInterestDetailComponent implements OnInit, OnDestroy {
               if (response.firstItem.pictures.value) {
                 this.galleryImages = response.firstItem.pictures.value.map(picture => {
                   return {
-                    small: picture.url,
+                    small: new ImageUrlBuilder(picture.url).withWidth(120).getUrl(),
                     big: picture.url,
                     medium: picture.url,
                     url: picture.url

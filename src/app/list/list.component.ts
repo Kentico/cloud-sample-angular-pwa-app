@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { DeliveryClient, ItemResponses } from 'kentico-cloud-delivery';
+import { DeliveryClient, ImageUrlBuilder, ItemResponses } from 'kentico-cloud-delivery';
 import { Subscription } from 'rxjs';
 import { GeolocationService } from '../services/geolocation.service';
 
@@ -43,6 +43,13 @@ export class ListComponent implements OnInit, OnDestroy {
 
   showPointOfInterest(pointOfInterest: PointOfInterest) {
     this.router.navigate(['/poi', pointOfInterest.urlSlug.value]);
+  }
+
+  getAvatarUrl(assetUrl: String) {
+    const imageUrlBuilder = new ImageUrlBuilder(assetUrl)
+      .withHeight(40)
+      .withWidth(40);
+    return imageUrlBuilder.getUrl();
   }
 }
 
