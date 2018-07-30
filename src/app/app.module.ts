@@ -6,14 +6,16 @@ import { MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule } from 
 
 import { environment } from '../environments/environment';
 import { DeliveryClientProvider } from './setup/delivery-client.provider';
-import { GeolocationService } from './geolocation.service';
+import { GeolocationService } from './services/geolocation.service';
 
 import { AppComponent } from './app.component';
+import { ListComponent } from './list/list.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
