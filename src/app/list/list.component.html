@@ -1,6 +1,6 @@
 <mat-card *ngFor="let poi of pointsOfInterest">
     <mat-card-header>
-      <img *ngIf="poi.avatar.value[0]" mat-card-avatar [src]="getAvatarUrl(poi.avatar.value[0].url)" alt="{{poi.avatar.value[0].description || poi.avatar.value[0].name}}" />
+      <img *ngIf="poi.avatar.value[0]; else defaultTeaser" mat-card-avatar [src]="getAvatarUrl(poi.avatar.value[0].url)" alt="{{poi.avatar.value[0].description || poi.avatar.value[0].name}}" />
       <mat-card-title>{{poi.title.value}}</mat-card-title>
       <mat-card-subtitle> &nbsp;</mat-card-subtitle>
     </mat-card-header>
@@ -11,3 +11,7 @@
         <button (click)="showPointOfInterest(poi)" mat-button><mat-icon>input</mat-icon></button>
     </mat-card-actions>
   </mat-card>
+
+  <ng-template #defaultTeaser>
+      <img mat-card-avatar src="/assets/images/default-teaser.svg" alt="Default teaser" />
+  </ng-template>

@@ -15,6 +15,7 @@ import { PointOfInterest } from '../models/point_of_interest';
 export class ListComponent implements OnInit, OnDestroy {
   dataSubscription: Subscription;
   pointsOfInterest: PointOfInterest[];
+  defaultTeaser;
 
   constructor(
     private deliveryClient: DeliveryClient,
