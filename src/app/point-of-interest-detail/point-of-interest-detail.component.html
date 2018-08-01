@@ -1,0 +1,12 @@
+<mat-card *ngIf="pointOfInterest">
+    <mat-card-header>
+        <img *ngIf="pointOfInterest.avatar.value[0]" mat-card-avatar src="{{pointOfInterest.avatar.value[0].url}}" alt="{{pointOfInterest.avatar.value[0].description || pointOfInterest.avatar.value[0].name}}" />
+        <mat-card-title>{{pointOfInterest.title.value}}</mat-card-title>
+        <mat-card-subtitle> &nbsp;</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content innerHTML="{{pointOfInterest.description.value}}">
+    </mat-card-content>
+    <mat-card-content>
+        <ngx-gallery *ngIf="galleryImages" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+    </mat-card-content>
+</mat-card>

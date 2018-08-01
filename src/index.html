@@ -2,64 +2,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Pack and Go</title>
-    <base href="/">
+  <meta charset="utf-8">
+  <title>Pack and Go</title>
+  <base href="/">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#1e88e5">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="manifest.json" />
-    <style>
-        header.static {
-            width: 100%;
-            height: 56px;
-            color: #fff;
-            background: #1e88e5;
-            position: fixed;
-            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 2px 9px 1px rgba(0, 0, 0, .12), 0 4px 2px -2px rgba(0, 0, 0, .2);
-            padding-left: 16px;
-            margin: auto;
-            z-index: 10000;
-        }
-
-        header.static h2 {
-            font-size: 20px;
-        }
-
-        main.static {
-
-
-            overflow-x: hidden;
-            overflow-y: auto
-        }
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e88e5">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    .loader {
+      left: 50%;
+      top: 50%;
+      position: fixed;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    #bounce>div {
+      width: 18px;
+      height: 18px;
+      background-color: #263238;
+      border-radius: 100%;
+      display: inline-block;
+      animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+    
+    #bounce .bounce1 {
+      animation-delay: -0.32s;
+    }
+    
+    #bounce .bounce2 {
+      animation-delay: -0.16s;
+    }
+    
+    @keyframes sk-bouncedelay {
+      0%,
+      80%,
+      100% {
+        transform: scale(0);
+      }
+      40% {
+        transform: scale(1.0);
+      }
+    }
+  </style>
+  </style>
 </head>
 
 <body style="padding: 0;
     margin: 0;
-    font-family: 'Helvetica', 'Verdana', 'sans-serif';
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
     background: #eeeeee;">
-    <noscript>
+  <noscript>
         This page require to have the javascript enabled.
     </noscript>
-    <app-root>
-        <header class="static" style="width: 100%;
-            height: 56px;
-            color: #fff;
-            background: #1e88e5;
-            position: fixed;
-            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 2px 9px 1px rgba(0, 0, 0, .12), 0 4px 2px -2px rgba(0, 0, 0, .2);
-            padding-left: 16px;
-            margin: auto;
-            z-index: 10000;">
-            <h2 style="font-size: 20px;">Pack and Go</h2>
-        </header>
-        <main style="padding-top: 60px;
+  <app-root>
+    <header style="width: 100%;
+        height: 64px;
+        display: flex;
+        color: #fff;
+        background: #1e88e5;
+        box-sizing: border-box;
+        padding: 0 16px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        white-space: nowrap;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        z-index: 10000;">
+      <img style="margin-right: 10px;
+            display: block;
+         width: 48px;
+            height: 48px;" alt="Pack and Go logo" src="/assets/images/icons/icon-72x72.png">
+      <h1 style="font-size: 20px;
+       font-weight: normal;">
+        Pack and Go
+      </h1>
+    </header>
+    <main style="padding-top: 60px;
             flex: 1;
             overflow-x: hidden;
-            overflow-y: auto;"></main>
-    </app-root>
+            overflow-y: auto;">
+      <div class="loader">
+        <div id="bounce">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+    </main>
+  </app-root>
 </body>
 
 </html>
