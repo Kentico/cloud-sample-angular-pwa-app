@@ -39,7 +39,7 @@ export class ListComponent implements OnInit, OnDestroy {
 
   openMap(pointOfInterest: PointOfInterest) {
     location.href = this.geolocationService
-      .getMapLink(pointOfInterest.latitudeDecimalDegrees.value, pointOfInterest.latitudeDecimalDegrees.value);
+      .getMapLink(pointOfInterest.latitudeDecimalDegrees.value, pointOfInterest.longitudeDecimalDegrees.value);
   }
 
   showPointOfInterest(pointOfInterest: PointOfInterest) {
