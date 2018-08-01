@@ -1,7 +1,33 @@
-mat-card {
-  margin: .5em;
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
 }
 
-mat-card-header mat-card-title {
-  font-size: larger;
+mat-card {
+  margin: .5em;
+  mat-card-header mat-card-title {
+    font-size: larger;
+  }
+  mat-card-content {
+    @include multiLineEllipsis($lineHeight: 14px, $lineCount: 3, $bgColor: white);
+  }
 }

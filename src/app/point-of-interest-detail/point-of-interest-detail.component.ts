@@ -31,7 +31,7 @@ export class PointOfInterestDetailComponent implements OnInit, OnDestroy {
         previewCloseOnClick: true,
         previewCloseOnEsc: true,
         previewZoom: true,
-        previewInfinityMove : true,
+        previewInfinityMove: true,
         imageAnimation: NgxGalleryAnimation.Slide,
         imageSwipe: true,
         imageArrowsAutoHide: true,
@@ -50,10 +50,11 @@ export class PointOfInterestDetailComponent implements OnInit, OnDestroy {
           this.dataSubscription = this.deliveryClient
             .items<PointOfInterest>()
             .equalsFilter('elements.url_slug', params['id'])
-            .getObservable ()
+            .getObservable()
             .subscribe((response) => {
               this.pointOfInterest = response.firstItem;
-              if (response.firstItem.pictures.value) {
+              console.log(response.firstItem.pictures.value.length);
+              if (response.firstItem.pictures.value.length > 0) {
                 this.galleryImages = response.firstItem.pictures.value.map(picture => {
                   return {
                     small: new ImageUrlBuilder(picture.url).withWidth(120).getUrl(),
