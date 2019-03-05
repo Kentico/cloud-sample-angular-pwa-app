@@ -1,7 +1,7 @@
 # Pack and Go - Kentico Cloud sample progressive web app
 [![Build Status](https://api.travis-ci.org/Kentico/cloud-sample-angular-pwa-app.svg?branch=master)](https://travis-ci.org/Kentico/cloud-sample-angular-pwa-app)
 [![Deploy Status](https://img.shields.io/badge/deploy-surge-brightgreen.svg)](https://kentico-cloud-sample-angular-pwa-app.surge.sh)
-[![Forums](https://img.shields.io/badge/chat-on%20forums-orange.svg)](https://forums.kenticocloud.com)
+[![Stack Overflow](https://img.shields.io/stackexchange/stackoverflow/t/kentico%2dcloud.svg?label=Stack%20Overflow)](https://stackoverflow.com/tags/kentico-cloud)
 
 A travel progressive web application featuring various points of interests around your location. Written in [Angular](https://angular.io/) using [Kentico Cloud](https://kenticocloud.com) as a data source.
 
