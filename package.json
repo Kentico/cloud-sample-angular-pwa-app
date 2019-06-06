@@ -69,6 +69,7 @@
     "karma-jasmine-html-reporter": "^1.1.0",
     "kentico-cloud-model-generator-utility": "^1.0.0",
     "lighthouse": "^2.9.4",
+    "node-sass": "^4.12.0",
     "protractor": "~5.3.2",
     "ts-node": "~6.0.5",
     "tslint": "~5.10.0",
