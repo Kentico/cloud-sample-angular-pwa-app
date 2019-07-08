@@ -1,5 +1,5 @@
 # Pack and Go - Kentico Cloud sample progressive web app
-[![Build Status](https://api.travis-ci.org/Kentico/cloud-sample-angular-pwa-app.svg?branch=master)](https://travis-ci.org/Kentico/cloud-sample-angular-pwa-app)
+[![Build Status](https://api.travis-ci.com/Kentico/cloud-sample-angular-pwa-app.svg?branch=master)](https://travis-ci.com/Kentico/cloud-sample-angular-pwa-app)
 [![Deploy Status](https://img.shields.io/badge/deploy-surge-brightgreen.svg)](https://kentico-cloud-sample-angular-pwa-app.surge.sh)
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-cloud)
 
